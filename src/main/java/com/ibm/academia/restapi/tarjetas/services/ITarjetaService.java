@@ -10,7 +10,7 @@ public interface ITarjetaService
 {
 	public List<Tarjeta> list();
 	public List<Tarjeta> findByTuPasion(String tuPasion);
-	public ResponseEntity<?> tarjetasAceptadas(String tuPasion,Double anio,Double salario);
+	public ResponseEntity<?> tarjetasAceptadas(String tuPasion,Double edad,Double salario);
 	public boolean existsByTuPasion(String tuPasion);
 
 }

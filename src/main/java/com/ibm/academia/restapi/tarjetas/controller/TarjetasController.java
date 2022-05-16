@@ -64,7 +64,7 @@ public class TarjetasController
 			
 		}	
 		
-		return tarjetaService.tarjetasAceptadas(tarjetaRequest.getTuPasion(), tarjetaRequest.getAnio(), tarjetaRequest.getSalarioMensual());
+		return tarjetaService.tarjetasAceptadas(tarjetaRequest.getTuPasion(), tarjetaRequest.getEdad(), tarjetaRequest.getSalarioMensual());
 		
 		
 	}

@@ -26,25 +26,29 @@ public class Tarjeta implements Serializable
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "Id")
-	private long id;
+	private Long id;
 	
 	@Column(name = "tu_Pasion", nullable = false, length = 150)
 	private String tuPasion;
 	
 	@Column(name = "salario_Mensual_Minimo", nullable = false)
-	private double salarioMensualMinimo;
+	private Double salarioMensualMinimo;
 	
 	@Column(name = "salario_Mensual_Maximo", nullable = false)
-	private double salarioMensualMaximo;
+	private Double salarioMensualMaximo;
 	
 	@Column(name = "anio_Minimo", nullable = false)
-	private double anioMinimo;
+	private Integer anioMinimo;
 	
 	@Column(name = "anio_Maximo", nullable = false)
-	private double anioMaximo;
+	private Integer anioMaximo;
 	
 	@Column(name = "tarjeta_Credito", nullable = false, length = 150)
 	private String tarjetaCredito;
+
+	
+
+
 
 	private static final long serialVersionUID = -8801949106521022477L;
 }

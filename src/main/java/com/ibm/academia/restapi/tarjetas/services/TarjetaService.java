@@ -36,17 +36,16 @@ public class TarjetaService implements ITarjetaService
 	 }
 	
 	 @Override
-public ResponseEntity<?> tarjetasAceptadas(String tuPasion,Double anio,Double salario)
+public ResponseEntity<?> tarjetasAceptadas(String tuPasion,Double edad,Double salario)
 {
 		List<Tarjeta> tarjetas = findByTuPasion(tuPasion);
 		List<String>tarjetasAceptadas = new ArrayList<>();
-		if(anio<18L || anio>75L) throw new BadRequestException("Anios invalidos");
 		if(salario<=7000L) throw new BadRequestException("salario invalido");
 			
 	if(!tarjetas.isEmpty()) {
 		for(Tarjeta tarjeta:tarjetas)
 		{
-			if(tarjeta.getAnioMinimo()<=anio && tarjeta.getAnioMaximo()>=anio)
+			if(tarjeta.getAnioMinimo()<=edad && tarjeta.getAnioMaximo()>=edad)
 			{
 				if(tarjeta.getSalarioMensualMinimo()<=salario && tarjeta.getSalarioMensualMaximo()>=salario)
 				{
